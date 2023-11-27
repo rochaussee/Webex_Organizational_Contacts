@@ -57,24 +57,27 @@ Also, given that the Webex App's "Embedded App" framework only supports applicat
 2. **Replace the private key and certificate by the ones that you have generated/signed:**
 
    Copy the "your_cert_key.key" and "your_signed_cert.pem" files in the "certs" folder with the corresponding files from your environment.
+   Also, modify the code according the name of your imported files at the end of the code :
+   ```bash
+   ssl_context=('./certs/your_cert.pem', './certs/your_key.key'))
 
-3. **Create a Webex Embedded App:**
+4. **Create a Webex Embedded App:**
 
    Create a "Sidebar" Embedded App on the Webex Developer portal. This will be configured with the URL of your custom app (for example: https://webexcontacts.domain.com:5000). The code utilizes Flask as its web application framework, operating on the default port 5000.
 
    For more information on this process, please refer to: https://developer.webex.com/docs/embedded-apps
 
-4. **Execute the script:**
+5. **Execute the script:**
    
    Having configured the project with your own .env file, private key, and certificate, you can now proceed to execute it as follows:
    ```bash
    python Webex_contacts_web.py
    ```
-5. **Validate your custom app is visible and working through the Webex App:**
+6. **Validate your custom app is visible and working through the Webex App:**
 
    ![image](https://github.com/rochaussee/Webex_Organizational_Contacts/assets/109152368/ac0c0b78-9e65-474e-9cd3-d5ec8c0d83e9)
 
-6. **Validate the List/Created/Updated/Deleted operations:**
+7. **Validate the List/Created/Updated/Deleted operations:**
 
    Ensure that the operations performed through this custom app are accurately reflected in the Control Hub Contacts database (navigate to Users -> Contacts to check).
 
