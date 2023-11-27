@@ -70,7 +70,7 @@ You can use openssl to create a private key and csr to signed.
    ```bash
    python Webex_contacts_web.py
    ```
-5. **Check that your custom app is visible and working through the Webex App:**
+5. **Validate your custom app is visible and working through the Webex App:**
 
    ![image](https://github.com/rochaussee/Webex_Organizational_Contacts/assets/109152368/ac0c0b78-9e65-474e-9cd3-d5ec8c0d83e9)
 
