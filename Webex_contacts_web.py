@@ -160,4 +160,4 @@ def index():
 
 #launch the Flask dev server in debug mode on all interfaces and port 5000:
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True, ssl_context=('./certs/webexcontacts.pem', './certs/webexcontacts.key'))
+    app.run(host='0.0.0.0', port=5000, debug=True, ssl_context=('./certs/your_cert.pem', './certs/your_key.key'))
