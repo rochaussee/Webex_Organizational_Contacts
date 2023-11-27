@@ -74,6 +74,10 @@ You can use openssl to create a private key and csr to signed.
 
    ![image](https://github.com/rochaussee/Webex_Organizational_Contacts/assets/109152368/ac0c0b78-9e65-474e-9cd3-d5ec8c0d83e9)
 
+6. **Validate the List/Created/Updated/Deleted operations:**
+
+   Validate the operations executed via this custom app are correctly reflected on the Control Hub Contacts database (Users ->  Contacts).
+
 
 **Note:** We recommend testing the script first on a Webex sandbox environment before using it in a production environment. You can create a sandbox account by following the instructions in the [Webex Developer Sandbox Guide](https://developer.webex.com/docs/developer-sandbox-guide).
 
