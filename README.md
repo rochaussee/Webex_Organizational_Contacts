@@ -36,17 +36,19 @@ Follow these steps to set up your development environment and install the projec
     ```
     This will install all the required packages and libraries.
 
-   ## Usage
+## Usage
    
-  The project requires a Webex auth token with a scope of Identity:contact.
-  You can obtain an auth token with a scope of Identity:contact by creating a Service App :
-    https://developer.webex.com/docs/service-apps
-  With a Service App, you will obtain the required elements to generate a new Access Token :
+The project requires a Webex auth token with a scope of Identity:contact.
+You can obtain an auth token with a scope of Identity:contact by creating a Service App :
+https://developer.webex.com/docs/service-apps
+  
+With a Service App, you will obtain the required elements to generate a new Access Token :
     - refresh token
     - client_id
     - client_secret
     - org_id
-  The "personal access token" (Full Admin personal token) is only need because Creating/Updating/Deleting operations are not supported by Service App as of today (in backlog).
+ 
+ The "personal access token" (Full Admin personal token) is only need because Creating/Updating/Deleting operations are not supported by Service App as of today (in backlog).
 
 1. **Replace the .env file according your environment:**
 
@@ -63,9 +65,8 @@ Now that you've configured the project with your API auth tokens, you can execut
 
 ## Contributing
 
-   We welcome contributions from the community to improve and enhance this project. Whether you want to fix a bug, add a new feature, or simply improve the documentation, your help is 
-   greatly appreciated.
+We welcome contributions from the community to improve and enhance this project. Whether you want to fix a bug, add a new feature, or simply improve the documentation, your help is greatly appreciated.
 
 ## License
 
-   This project is open-source and available under the [MIT License](LICENSE.md).
+This project is open-source and available under the [MIT License](LICENSE.md).
