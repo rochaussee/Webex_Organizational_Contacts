@@ -57,12 +57,23 @@ You can use openssl to create a private key and csr to signed.
 
    Replace the files "your_cert_key.key" & "your_signed_cert.pem" of the folder "certs" by the ones of your environment.
 
-3. **Execute the script:**
+3. **Create a Webex Embedded App:**
+
+   Create a "Sidebar" Embedded App on the Webex Developer portal that will be configured with the URL of your custom app (ex : https://webexcontacts.domain.com:5000).
+   The code is using Flask as  web application framework on its default port 5000.
+
+   More details on Webex Embedded App : https://developer.webex.com/docs/embedded-apps
+
+4. **Execute the script:**
    
    Now that you've configured the project with your API auth tokens, you can execute it as follows:
    ```bash
    python Webex_contacts_web.py
    ```
+5. **Check that your custom app is visible and working through the Webex App:**
+
+   ![image](https://github.com/rochaussee/Webex_Organizational_Contacts/assets/109152368/ac0c0b78-9e65-474e-9cd3-d5ec8c0d83e9)
+
 
 **Note:** We recommend testing the script first on a Webex sandbox environment before using it in a production environment. You can create a sandbox account by following the instructions in the [Webex Developer Sandbox Guide](https://developer.webex.com/docs/developer-sandbox-guide).
 
