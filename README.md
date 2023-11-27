@@ -1,5 +1,5 @@
 # Webex_Organizational_Contacts
-Custom web application leveraging the Webex public APIs for Organizational Contacts
+Webex App custom web application leveraging the Webex public APIs for Organizational Contacts
 
 ## Table of Contents
 
@@ -48,11 +48,17 @@ With a Service App, you will obtain the required elements to generate a new Acce
     - client_secret
     - org_id
  
- The "personal access token" (Full Admin personal token) is only need because Creating/Updating/Deleting operations are not supported by Service App as of today (in backlog).
+The "personal access token" (Full Admin personal token) is only need because Creating/Updating/Deleting operations are not supported by Service App as of today (in backlog).
+
+Also, as the Webex App "embedded app" feature is only supporting application over https, you have to create/import your own private key and certificate for this custom app. You can use openssl to create a private key and certificate csr.
 
 1. **Replace the .env file according your environment:**
 
- Replace the required authentication elements (explained above) by the ones of your environment.
+   Replace the required authentication elements (explained above) by the ones of your environment.
+
+3. **Replace the private key and certificate by the ones that you have generated/signed":**
+
+   Replace the files "your_cert_key.key" & "your_signed_cert.pem" in the folder "certs" by the ones of your environment.
 
 2. **Execute the script:**
    
