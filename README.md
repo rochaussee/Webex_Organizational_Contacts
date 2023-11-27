@@ -1,5 +1,5 @@
 # Webex_Organizational_Contacts
-A Webex App custom web application leveraging the Webex public APIs for Organizational Contacts.
+This is a custom Webex App web application that leverage Webex's public APIs for managing Organizational Contacts.
 
 With the help of this custom app, users who are not "Webex Control Hub Admins" can directly manage the Webex Contacts database through their own Webex App. This eliminates the need for interacting with a Webex Admin for this routine task.
 
