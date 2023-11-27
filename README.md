@@ -42,27 +42,24 @@ The project requires a Webex auth token with a scope of Identity:contact.
 You can obtain an auth token with a scope of Identity:contact by creating a Service App :
 https://developer.webex.com/docs/service-apps
   
-With a Service App, you will obtain the required elements to generate a new Access Token :
-    - refresh token
-    - client_id
-    - client_secret
-    - org_id
+After creating a Service App, you will obtain the required elements (refresh token, client_id, client_secret) to generate a new Access Token.
  
 The "personal access token" (Full Admin personal token) is only need because Creating/Updating/Deleting operations are not supported by Service App as of today (in backlog).
 
-Also, as the Webex App "embedded app" feature is only supporting application over https, you have to create/import your own private key and certificate for this custom app. You can use openssl to create a private key and certificate csr.
+Also, as the Webex App "Embedded App" framework is only supporting application over https, you have to create/import your own private key and certificate for this custom app. 
+You can use openssl to create a private key and csr to signed.
 
 1. **Replace the .env file according your environment:**
 
    Replace the required authentication elements (explained above) by the ones of your environment.
 
-3. **Replace the private key and certificate by the ones that you have generated/signed":**
+2. **Replace the private key and certificate by the ones that you have generated/signed:**
 
-   Replace the files "your_cert_key.key" & "your_signed_cert.pem" in the folder "certs" by the ones of your environment.
+   Replace the files "your_cert_key.key" & "your_signed_cert.pem" of the folder "certs" by the ones of your environment.
 
-2. **Execute the script:**
+3. **Execute the script:**
    
-Now that you've configured the project with your API auth tokens, you can execute it as follows:
+   Now that you've configured the project with your API auth tokens, you can execute it as follows:
    ```bash
    python Webex_contacts_web.py
    ```
