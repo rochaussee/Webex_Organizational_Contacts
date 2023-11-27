@@ -40,35 +40,33 @@ Follow these steps to set up your development environment and install the projec
 
 ## Usage
    
-The project requires a Webex auth token with a scope of Identity:contact.
-You can obtain an auth token with a scope of Identity:contact by creating a Service App :
-https://developer.webex.com/docs/service-apps
-  
-After creating a Service App, you will obtain the required elements (refresh token, client_id, client_secret) to generate a new Access Token.
- 
-The "personal access token" (Full Admin personal token) is only need because Creating/Updating/Deleting operations are not supported by Service App as of today (in backlog).
+This project requires a Webex authorization token that includes the 'Identity:contact' scope. You can acquire such an authorization token by setting up a Service App.
 
-Also, as the Webex App "Embedded App" framework is only supporting application over https, you have to create/import your own private key and certificate for this custom app. 
-You can use openssl to create a private key and csr to signed.
+For more information on this process, please refer to: https://developer.webex.com/docs/service-apps.
+  
+Upon creating a Service App, you'll receive the necessary elements (refresh token, client_id, client_secret) to generate a new Access Token.
+ 
+The "personal access token" (Full Admin personal token) is only required because, as of now, Service Apps do not support Create/Update/Delete operations (this feature is currently in the backlog).
+
+Also, given that the Webex App's "Embedded App" framework only supports applications over HTTPS, you will need to create & import your own private key and certificate for this custom app. OpenSSL can be utilized to generate a private key and a Certificate Signing Request (CSR).
 
 1. **Replace the .env file according your environment:**
 
-   Replace the required authentication elements (explained above) by the ones of your environment.
+   Copy the necessary authentication elements (as explained above) with the corresponding ones from your environment.
 
 2. **Replace the private key and certificate by the ones that you have generated/signed:**
 
-   Replace the files "your_cert_key.key" & "your_signed_cert.pem" of the folder "certs" by the ones of your environment.
+   Copy the "your_cert_key.key" and "your_signed_cert.pem" files in the "certs" folder with the corresponding files from your environment.
 
 3. **Create a Webex Embedded App:**
 
-   Create a "Sidebar" Embedded App on the Webex Developer portal that will be configured with the URL of your custom app (ex : https://webexcontacts.domain.com:5000).
-   The code is using Flask as  web application framework on its default port 5000.
+   Create a "Sidebar" Embedded App on the Webex Developer portal. This will be configured with the URL of your custom app (for example: https://webexcontacts.domain.com:5000). The code utilizes Flask as its web application framework, operating on the default port 5000.
 
-   More details on Webex Embedded App : https://developer.webex.com/docs/embedded-apps
+   For more information on this process, please refer to: https://developer.webex.com/docs/embedded-apps
 
 4. **Execute the script:**
    
-   Now that you've configured the project with your API auth tokens, you can execute it as follows:
+   Having configured the project with your own .env file, private key, and certificate, you can now proceed to execute it as follows:
    ```bash
    python Webex_contacts_web.py
    ```
@@ -78,7 +76,7 @@ You can use openssl to create a private key and csr to signed.
 
 6. **Validate the List/Created/Updated/Deleted operations:**
 
-   Validate the operations executed via this custom app are correctly reflected on the Control Hub Contacts database (Users ->  Contacts).
+   Ensure that the operations performed through this custom app are accurately reflected in the Control Hub Contacts database (navigate to Users -> Contacts to check).
 
 
 **Note:** We recommend testing the script first on a Webex sandbox environment before using it in a production environment. You can create a sandbox account by following the instructions in the [Webex Developer Sandbox Guide](https://developer.webex.com/docs/developer-sandbox-guide).
