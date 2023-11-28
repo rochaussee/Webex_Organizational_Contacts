@@ -56,7 +56,7 @@ Also, given that the Webex App's "Embedded App" framework only supports applicat
 
    Copy the necessary authentication elements (as explained above) with the corresponding ones from your environment.
 
-2. **Replace the private key and certificate by the ones that you have generated/signed:**
+2. **Replace the private key and certificate by the ones you have generated/signed:**
 
    Copy the "your_cert_key.key" and "your_signed_cert.pem" files in the "certs" folder with the corresponding files from your environment.
    Also, modify the code according the name of your imported files at the end of the code :
