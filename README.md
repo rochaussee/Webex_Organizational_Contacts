@@ -21,7 +21,7 @@ Follow these steps to set up your development environment and install the projec
    ```bash
    git clone https://github.com/rochaussee/Webex_Organizational_Contacts.git
 
-2. **Navigate to the Project Directory:**
+2. **Navigate to the Project Directory and unzip the .zip files:**
    
    Change your current directory to the project's directory:
    
