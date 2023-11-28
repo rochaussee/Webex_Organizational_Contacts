@@ -27,6 +27,8 @@ Follow these steps to set up your development environment and install the projec
    
    ```bash
    cd Webex_Organizational_Contacts
+   unzip certs.zip
+   unzip templates.zip
 
     ```
 3. **Install Dependencies:**
